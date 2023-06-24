@@ -3,9 +3,11 @@
 </script>
  
 <template>
-<div>
-<p>Addicted to Drugs or Addicted to Her</p>
-</div>
+
+    <h1>About Page</h1>
+    <p>This is some information about me.</p>
+
+
 </template>
  
 <style scoped>
