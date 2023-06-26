@@ -7,7 +7,7 @@
 <div class="w-full h-full flex flex-col">
 
         <!-- /////////////// ย่อหน้าแรก /////////////// -->
-        <div class="p-5 ml-10 mr-10 flex justify-center item-center" >
+        <div class="p-5 ml-10 mr-10 flex justify-center item-center h-screen">
         
             <!-- ข้อความ กับ ปุ่ม -->
             <div class="w-full flex pl-10 justify-center" className="card-body">
@@ -21,9 +21,13 @@
                     </div>
 
                     <div class="mt-20 flex">
-                        <a href="#about">
-                        <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-lg px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">MORE INFO</button>
-                        </a>
+                      <a href="#about" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 bg-purple-600 rounded-full shadow-md group">
+                      <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-800 group-hover:translate-x-0 ease">
+                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                      </span>
+                      <span class="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">MORE INFO</span>
+                      <span class="relative invisible">Button Text</span>
+                      </a>
                     </div>
                     
                 </div>
@@ -38,21 +42,29 @@
     
 
         <!-- /////////////// ย่อหน้าที่สอง /////////////// -->
-        <div id="about">
-            <div class="hero min-h-screen bg-base-200">
-  <div class="hero-content flex-col lg:flex-row">
-    
-    <div>
-      <h1 class="text-5xl font-bold">Box Office News!</h1>
-      <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button class="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
+        <div id="about" class="w-full h-screen">
+          <div class="flex">
+          <figure class="border-8 border-white rounded mr-1"><img src="../assets/images/Jeng2.jpg" alt="jeng" class="h-80"></figure>
+            <a href="/Users/Jeng/Downloads/Resume.pdf" download="file:///C:/Users/Jeng/Downloads/Resume.pdf">
+                <button>Download File</button>
+            </a>
+            </div>
         </div>
 
-
         <!-- /////////////// ย่อหน้าที่สาม /////////////// -->
+        <div id="subscribe" class="w-full h-screen">
+          <div class="flex">
+          <figure class="border-8 border-white rounded mr-1"><img src="../assets/images/Jeng2.jpg" alt="jeng" class="h-80"></figure>
+              <form>
+                <label for="email">Subscribe to my mailing list</label>
+                <input type="email" value="" name="email" placeholder="email address" required>
+                <input type="submit" value="Subscribe" name="subscribe">
+              </form>
+            </div>
+        </div>
+
+        
+        <!-- /////////////// ย่อหน้าที่สี่ /////////////// -->
         <footer class="footer p-10 bg-neutral text-neutral-content">
             <div>
                 <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
@@ -81,6 +93,19 @@
   }
 }
 
+#about {
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+}
+
+
+#subscribe{
+  display: grid;
+  place-items: center;
+  background-color: #774db3;
+}
+
 .card-body {
   animation: fadeIn 2s;
 }
@@ -97,5 +122,79 @@ img.object-contain {
   font-weight: bold;
 }
 
+
+form {
+  position: relative;
+  width: 440px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 40px 40px -20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  
+}
+
+/* ข้อความตัวใหญ่ */
+label {
+  display: block;
+  margin-bottom: 20px;
+  color: #774db3;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* กรอบของปุ่ม */
+input {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+input[type=email] {
+  margin-bottom: 20px;
+  border-bottom: 2px solid;
+  padding: 10px 0;
+  background-color: transparent;
+  color: #999999;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+/* ช่องกรอกข้อความขยายขึ้น */
+input[type=email]:focus {
+  width: 100%;
+}
+
+/* ปุ่ม submit */
+input[type=submit] {
+  padding: 15px;
+  background-color: #774db3;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 0 #774db3;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s;
+}
+/* hold ปุ่ม submit */
+input[type=submit]:hover, input[type=submit]:focus {
+  box-shadow: 0 7px 0 #774db3;
+  transform: translateY(-2px);
+}
+
+/* กด ปุ่ม submit */
+input[type=submit]:active {
+  box-shadow: 0 3px 0 #774db3;
+  transform: translateY(2px);
+}
 
 </style>
